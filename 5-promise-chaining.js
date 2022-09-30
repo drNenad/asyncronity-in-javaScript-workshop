@@ -1,0 +1,7 @@
+Promise.resolve(2)
+    .then(result => result + 2)
+    .then(result => result + 4)
+    .then(result => result + 10)
+    .then(result=> console.log(result))
+    .catch(error => { return Promise.resolve(error) })
+    .then(result => console.log(result))
